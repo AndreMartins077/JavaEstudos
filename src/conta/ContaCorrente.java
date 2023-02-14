@@ -49,8 +49,9 @@ public class ContaCorrente extends ContaBancaria {
 		saldo += valor;
 		System.out.println("##########");
 		System.out.println("Você efetuou um depósito no valor de: " + valor);
-		System.out.println("\nO Saldo final é de: " + getSaldo());
-		return saldo;
+		System.out.println("O Saldo final é de: " + saldo);
+		setSaldo(saldo);
+		return getSaldo();
 	}
 
 	@Override
@@ -58,8 +59,9 @@ public class ContaCorrente extends ContaBancaria {
 		saldo -= valor;
 		System.out.println("##########");
 		System.out.println("Você efetuou um saque no valor de: " + valor);
-		System.out.println("\nO Saldo final é de: " + getSaldo());
-		return saldo;
+		System.out.println("O Saldo final é de: " + saldo);
+		setSaldo(saldo);
+		return getSaldo();
 	}
 	
 	public double pagarfatura(double valor, double saldo) {
